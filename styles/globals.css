@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img{
+    max-height: 100%;
+}
+
+input, textarea, select{
+    @apply border-2  rounded-md w-full py-2 px-3;
+    @apply mb-2;
+}
+
+
+
+h1{
+    @apply mb-4 text-xl;
+}
+
+label{
+    @apply  text-sm;
+}
+
+.btn-primary{
+    @apply  px-4 py-1 rounded-lg shadow-sm text-stone-800 font-bold bg-stone-300 opacity-60
+     hover:bg-gradient-to-l from-black-950 to-black-800 hover:text-neon-pink hover:opacity-90;
+}
+
+table.basic{
+    @apply w-full opacity-90;
+    z-index: -1;
+}
+
+table.basic thead tr th
+{
+    @apply text-sm  uppercase border-b px-4 py-2;
+    z-index:"1";
+}
+table.basic tr td{
+    @apply border  px-4 py-1 bg-stone-800 text-stone-200 text-2xl; 
+}
+table.basic a{
+    @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1 bg-stone-700 hover:bg-gradient-to-l from-black-950 to-black-800 hover:text-neon-blue hover:opacity-90;
+}
+.btn-default,.btn-red{
+    @apply px-4 py-1 rounded-md shadow-sm bg-silver-200;
+}
