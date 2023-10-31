@@ -12,6 +12,7 @@ export default NextAuth({
     }),
 
   ],
-  adapter: MongoDBAdapter(clientPromise)
+  adapter: MongoDBAdapter(clientPromise),
+  secret: process.env.JWT_SECRET
   
 })
