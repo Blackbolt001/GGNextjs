@@ -26,7 +26,10 @@
     "react-sortable": "^2.0.0",
     "react-sortablejs": "^6.1.4",
     "react-spinners": "^0.13.8",
-    "sortablejs": "^1.15.0"
+    "react-sweetalert2": "^0.6.0",
+    "sortablejs": "^1.15.0",
+    "sweetalert2": "^11.9.0",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/sortablejs": "^1.15.4",
