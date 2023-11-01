@@ -27,7 +27,7 @@ label{
 }
 
 table.basic{
-    @apply w-full opacity-90;
+    @apply w-full opacity-80;
     z-index: -1;
 }
 
@@ -37,11 +37,11 @@ table.basic thead tr th
     z-index:"1";
 }
 table.basic tr td{
-    @apply border  px-4 py-1 bg-dodger-blue-800 text-silver-200 text-2xl; 
+    @apply border  px-4 py-1 bg-silver-800 text-silver-100 text-2xl; 
 }
 table.basic a{
-    @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1 bg-silver-300 text-silver-300 hover:bg-gradient-to-l from-silver-900 to-black-900 hover:text-silver-100 hover:opacity-90;
+    @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1  bg-silver-300 text-silver-300 hover:bg-gradient-to-l from-silver-900 to-black-900 hover:text-silver-100 hover:opacity-90;
 }
 .btn-default,.btn-red{
-    @apply px-4 py-1 rounded-md shadow-sm bg-dodger-blue-600;
+    @apply px-4 py-1 rounded-md shadow-sm bg-black-950;
 }
