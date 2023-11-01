@@ -1,12 +1,10 @@
 import Layout from "@/components/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import  Swal   from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import  {withSwal}   from 'react-sweetalert2'
 
-const MySwal = withReactContent(Swal)
 
- export default function Categories(swal) {
+ function Categories({swal}) {
     const [editedCategory, setEditedCategory] = useState(null);
     const [name,setName] = useState('');
     const [parentCategory,setParentCategory] = useState('');
@@ -43,9 +41,9 @@ function editCategory(category){
 }
 
 function deleteCategory(category) {
-    Swal.fire({
+    swal.fire({
         title: 'Category will be Deleted',
-        text: 'Are you Sure?',
+        text: `Are you Sure you want to delete ${category.name}?`,
         showCancelButton: true,
         cancelButtonText: 'Cancel',
         confirmButtonText:'Delete',
@@ -70,14 +68,15 @@ function deleteCategory(category) {
             ? `Edit category ${editedCategory.name}`
             : 'Create new category'}
             </label>
-            <form onSubmit={saveCategory} className="flex gap-1">
+            <form onSubmit={saveCategory}>
+                <div className="flex gap-1">
                 <input
-                className="mb-0"
+               
                 type="text"
                 placeholder= {'Category name'}
                 onChange={ev => setName(ev.target.value)}
                 value={name}/>
-                <select className="mb-0"
+                <select
                 onChange={ev => setParentCategory(ev.target.value)}
                 value={parentCategory}>
                     <option value="">No parent category</option>
@@ -86,8 +85,16 @@ function deleteCategory(category) {
                     {category.name}</option>
                     ))}
                 </select>
-                <button type="submit" className="btn-primary py-1">
-                    Save
+                </div>
+                <div>
+                    <label>Properties</label>
+                </div>
+                <button type="submit" className="btn-primary py-1 flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" color="red" fontWeight="bold">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+</svg> Add properties
+
+
                 </button>
                 </form>
                 {!editedCategory && (
@@ -121,4 +128,6 @@ function deleteCategory(category) {
     );
 }
 
-
+export default withSwal(({swal}, ref) => (
+    <Categories swal={swal} />
+));

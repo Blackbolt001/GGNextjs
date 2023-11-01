@@ -8,7 +8,7 @@ export default function Layout({children}) {
   const { data: session } = useSession()
  if (!session) {
   return (
-    <div className=" mx-auto bg-[url('https://wallpapercave.com/wp/wp12617744.jpg')]  justify-center bg-no-repeat bg-cover bg-center min-h-screen  flex flex-wrap">
+    <div className=" mx-auto bg-[url('https://www.hdwallpapers.in/download/tunnel_lights_reflection_on_road_black_background_hd_black_background-HD.jpg')]  justify-center bg-no-repeat bg-cover bg-center min-h-screen  flex flex-wrap">
       <div className="bg-black bg-cover h-96 w-full bg-center p-24 flex">
         <h1 className="text-white font-bold text-6xl hover:text-neon-blue">Georgia Goose
         <span className="text-black-400 hover:text-neon-yellow"> Designs </span> 
@@ -32,7 +32,7 @@ export default function Layout({children}) {
 
  }
   return (
-   <div className="bg-[url('https://www.rowansims.com/wp-content/uploads/2018/01/february-2018-desktop-wallpaper-moraine-lake-alberta-canada.jpg')] justify-center bg-no-repeat bg-cover bg-center min-h-screen flex">
+   <div className="bg-[url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-abstract-background-black-background-2560x2560-8710.jpg')] justify-center bg-no-repeat bg-cover bg-center min-h-screen flex">
     <Nav/>
     <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
