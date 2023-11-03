@@ -8,7 +8,7 @@ export default function Layout({children}) {
   const { data: session } = useSession()
  if (!session) {
   return (
-    <div className=" scroll-smooth mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] z-1 justify-center  bg-no-repeat top center bg-center min-h-screen flex flex-wrap">
+    <div className=" smoo mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] z-1 justify-center  bg-no-repeat top center bg-center min-h-screen flex flex-wrap">
       <h1></h1>
       <div className="   p- flex flex-auto">
         <h1 className="text-neon-blue font-bold text-6xl hover:text-neon-blue  hover:blur-none duration-1000 z-5">Georgia Goose
@@ -52,7 +52,7 @@ export default function Layout({children}) {
    </div>
 
 
-   <div className=" scroll-smooth bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] opacity-0 justify-center bg-no-repeat bg-cover bg-center min-h-screen flex hover:opacity-100 duration-1000">
+   <div className="bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] opacity-0 justify-center bg-no-repeat bg-cover bg-center min-h-screen flex hover:opacity-100 duration-500">
     <Nav/>
     <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
