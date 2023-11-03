@@ -8,13 +8,13 @@ export default function Layout({children}) {
   const { data: session } = useSession()
  if (!session) {
   return (
-    <div className=" mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')]  justify-center bg-no-repeat bg-cover bg-center min-h-screen  flex flex-wrap">
-      <div className="bg-black bg-cover h-96 w-full bg-center p-24 flex">
+    <div className=" mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')]  justify-center  bg-no-repeat bg-cover bg-center min-h-screen flex flex-wrap">
+      <div className=" h-60 w-full bg-center p-12 flex flex-wrap">
         <h1 className="text-white font-bold text-6xl hover:text-neon-blue blur-sm hover:blur-none duration-1000">Georgia Goose
         <span className="text-black-400 hover:text-neon-yellow hover:blur-none blur-sm duration-700"> Designs </span> 
         </h1>
         <div>
-        <h2 className="text-silver-600 mx-4 text-center font-bold text-3x1 blur-sm hover:text-candlelight-200 hover:blur-none duration-1000"> <ul>Backend Dashboard platforms</ul>
+        <h2 className="text-silver-600 m-4 text-center font-bold text-3x1 blur-sm hover:text-candlelight-200 hover:blur-none duration-1000"> <ul>Backend Dashboard platforms</ul>
         <ul>
           <li className=" text-stone-400 hover:text-silver-100">putting businesses back in charge.
           </li>

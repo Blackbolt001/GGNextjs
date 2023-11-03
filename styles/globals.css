@@ -7,7 +7,7 @@ img{
 }
 
 input, textarea, select{
-    @apply border-2  rounded-md w-full py-2 px-3;
+    @apply border-2  rounded-md w-full py-2 px-3 bg-stone-200 saturate-50 opacity-80;
     @apply mb-2;
 }
 
@@ -18,7 +18,7 @@ h1{
 }
 
 label{
-    @apply  text-sm;
+    @apply  text-sm text-neon-pink;
 }
 
 .btn-primary{

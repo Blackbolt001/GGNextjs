@@ -9,9 +9,7 @@ export default function App({
   return (
     
     <SessionProvider session={session}>
-        <NextThemesProvider attribute='class' defaultTheme='dark'>
       <Component {...pageProps}/>
-      </NextThemesProvider>
     </SessionProvider>
   )
 }

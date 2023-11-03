@@ -95,12 +95,21 @@ function deleteCategory(category) {
                     <label className="block">Properties</label>
                     <button onClick={addProperty}
                     className="btn-default text-sm"
-                     type="button">Add new Property</button>
+                     type="button">Add new Property
+                     </button>
+                     {properties.length > 0 && properties.map(property => (
+                        <div className="flex gap-1">
+                            <input type="text" value={property.name} placeholder="property name (example:color)"/>
+                            <input type="text" value={property.values} placeholder="values, comma separated"/>
+                        </div>
+                     )
+
+                     )}
                 </div>
                 <button type="submit" className="btn-primary flex gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" color="" fontWeight="bold">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-</svg> Save
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                </svg> Save
 
 
                 </button>
