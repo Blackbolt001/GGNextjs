@@ -53,7 +53,7 @@ export default function Layout({children}) {
    
 
 
-   <div className="bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] opacity-0 justify-center bg-no-repeat bg-cover bg-center min-h-screen flex hover:opacity-100 duration-500">
+   <div className=" relative bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] opacity-0 justify-center bg-no-repeat bg-cover bg-center min-h-screen flex hover:opacity-100 duration-500">
     <Nav/>
     <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
