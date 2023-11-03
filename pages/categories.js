@@ -76,7 +76,6 @@ function deleteCategory(category) {
             <form onSubmit={saveCategory}>
                 <div className="flex gap-1">
                 <input
-               
                 type="text"
                 placeholder= {'Category name'}
                 onChange={ev => setName(ev.target.value)}
