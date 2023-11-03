@@ -34,24 +34,15 @@ export default function Layout({children}) {
 
  }
   return (
-   
-
-
-   <div className=" relative bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')] justify-center bg-no-repeat bg-bottom  min-h-screen flex">
+    <div className=" p-12 flex flex-wrap">
+      <h1 className="text-neon-blue font-bold text-6xl   hover:blur-none duration-1000 "> <span className="text-neon-pink saturate-150 font-bold">Georgia</span> Goose
+      <span className="text-black-400 hover:text-neon-yellow hover:blur-none blur-sm duration-700 "> Designs </span> 
+      </h1>
     <Nav/>
     <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
-    </div>
-    
-<div className="  mx-auto   justify-center bg-center min-h-screen flex flex-wrap">  
-<div className="   p-12 flex flex-auto">
-  <h1 className="text-neon-blue font-bold text-6xl   hover:blur-none duration-1000 "> <span className="text-neon-pink saturate-150 font-bold">Georgia</span> Goose
-  <span className="text-black-400 hover:text-neon-yellow hover:blur-none blur-sm duration-700 "> Designs </span> 
-  </h1>
-  <div className="bg-silver-200 saturate-50 py-20">
   </div>
-</div>
-</div>
-</div>
+  </div>
+
   );
 }
