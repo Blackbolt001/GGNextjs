@@ -36,9 +36,6 @@ export default function Layout({children}) {
     <Nav/>
     <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
-   <div className="bg-stone-800 text-bold text-2xl mt-2 mr-2 mb-2 rounded-lg p-4">
-Nothing
-   </div>
    </div>
   </div>
   );

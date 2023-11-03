@@ -17,7 +17,7 @@ const [products,setProducts] = useState([]);
     return (
         <Layout>
             <Link className="btn-primary" href={'/products/new'}>Add new product</Link>
-            <table className="basic mt-2 bg-[url('https://img.freepik.com/premium-photo/beautifully-sprinkled-water-ripples-water-drops_567332-436.jpg')] justify-center bg-no-repeat bg-cover bg-center">
+            <table className="basic mt-2">
                 <thead>
                     <tr>
                         <td>Product Name</td>

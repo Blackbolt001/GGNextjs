@@ -2,51 +2,52 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Nav() {
-const inactiveLink = 'flex gap-2  flex opacity-80 text-stone-200  text-bold rounded-l-lg hover:opacity-100 hover:text-neon-pink hover:bg-black-950';
-const activeLink = inactiveLink+ ' bg-dodger-silver-200 text-neon-blue hover:opacity-100';
+const inactiveLink = 'flex gap-2  opacity-80 text-bold rounded-l-lg hover:text-neon-pink hover:bg-black-600';
+const activeLink = inactiveLink+ ' bg-dodger-blue-700 text-black-800';
 const router =useRouter();
 const {pathname} = router;
 
 
 
     return(
+        
         <aside className="  text-black-200 font-bold text-2xl p-4 pr-0 opacity-90 ">
             <Link href={'/'} className="flex gap-1 mb-4 mr-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
-        </svg>
+           <svg viewBox="0 0 24 24" fill="silver" class="w-8 h-8">
+      <path d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z" />
+     </svg>
         <span className="">
-        EcommerceAdmin
+        GeorgiaGoose.
         </span>
         </Link>
 
         <nav className='flex flex-col gap-2'>
         <Link href={'/'} className={pathname === '/' ? activeLink : inactiveLink}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <h1 className='hover:text-neon-green'>Dashboard</h1>
+        <svg viewBox="0 0 1024 1024" class="h-12 w-12 flex py-1 gap-2"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M594.7 800.4H272.4c-10.7 0-19.4 8.7-19.4 19.4s8.7 19.4 19.4 19.4h322.3c10.7 0 19.4-8.7 19.4-19.4 0-10.8-8.7-19.4-19.4-19.4z" fill="#005BFF" /><path d="M912.9 771.4v39H968c-8.1-22.7-29.7-39-55.1-39z" fill="#E6E6E6" /><path d="M815.6 675.9V235.2c0-16.1-13.1-29.1-29.1-29.1H80.6c-16.1 0-29.1 13.1-29.1 29.1v440.7c0 16.1 13.1 29.1 29.1 29.1h705.9c16.1 0.1 29.1-13 29.1-29.1z m-43.9-42c0 16-13.1 29.1-29.1 29.1h-618c-16 0-29.1-13.1-29.1-29.1V277.3c0-16 13.1-29.1 29.1-29.1h618c16 0 29.1 13.1 29.1 29.1v356.6z" fill="#FFFFFF" /><path d="M742.6 248.2h-618c-16 0-29.1 13.1-29.1 29.1v356.6c0 16 13.1 29.1 29.1 29.1h618c16 0 29.1-13.1 29.1-29.1V277.3c0-16-13.1-29.1-29.1-29.1z m-523.3 32.2c0-1.6 1.3-2.8 2.8-2.8h61.3c1.6 0 2.8 1.3 2.8 2.8v17.5c0 1.6-1.3 2.8-2.8 2.8h-61.3c-1.6 0-2.8-1.3-2.8-2.8v-17.5z m-30.3-3.5c6.6 0 11.9 5.3 11.9 11.9s-5.3 11.9-11.9 11.9c-6.6 0-11.9-5.3-11.9-11.9s5.4-11.9 11.9-11.9z m-39 0c6.6 0 11.9 5.3 11.9 11.9s-5.3 11.9-11.9 11.9c-6.6 0-11.9-5.3-11.9-11.9s5.3-11.9 11.9-11.9z m237.3 181.7c0 67.8-55.2 123-123 123s-123-55.2-123-123 55.2-123 123-123h9.7v113.3h113.3v9.7z m-90.1-38.7v-94.7c52.3 0 94.7 42.4 94.7 94.7h-94.7z m373.6 148.9H530.1c-5.4 0-9.7-4.3-9.7-9.7 0-5.4 4.3-9.7 9.7-9.7h140.7c5.4 0 9.7 4.3 9.7 9.7 0 5.3-4.3 9.7-9.7 9.7z m0-73.3H525.2c-5.4 0-9.7-4.3-9.7-9.7s4.3-9.7 9.7-9.7h145.6c5.4 0 9.7 4.3 9.7 9.7s-4.3 9.7-9.7 9.7z m0-73.4H461.2c-5.4 0-9.7-4.3-9.7-9.7s4.3-9.7 9.7-9.7h209.7c5.4 0 9.7 4.3 9.7 9.7s-4.4 9.7-9.8 9.7z m0-73.3H461.2c-5.4 0-9.7-4.3-9.7-9.7s4.3-9.7 9.7-9.7h209.7c5.4 0 9.7 4.3 9.7 9.7s-4.4 9.7-9.8 9.7z" fill="#E6E6E6" /><path d="M254.6 355.5c-52.6 4.9-93.9 49.3-93.9 103.1 0 57.1 46.5 103.6 103.6 103.6 53.8 0 98.2-41.3 103.1-93.9H254.6V355.5z" fill="#FFFFFF" /><path d="M274 335.6h-9.7c-67.8 0-123 55.2-123 123s55.2 123 123 123 123-55.2 123-123v-9.7H274V335.6z m93.4 132.8c-4.9 52.6-49.3 93.9-103.1 93.9-57.1 0-103.6-46.5-103.6-103.6 0-53.8 41.3-98.2 93.9-103.1v112.8h112.8z" fill="#005BFF" /><path d="M297.2 325.2v94.7h94.7c0-52.3-42.4-94.7-94.7-94.7z" fill="#005BFF" /><path d="M150 288.8m-11.9 0a11.9 11.9 0 1 0 23.8 0 11.9 11.9 0 1 0-23.8 0Z" fill="#FFFFFF" /><path d="M189 288.8m-11.9 0a11.9 11.9 0 1 0 23.8 0 11.9 11.9 0 1 0-23.8 0Z" fill="#FFFFFF" /><path d="M222.1 300.7h61.3c1.6 0 2.8-1.3 2.8-2.8v-17.5c0-1.6-1.3-2.8-2.8-2.8h-61.3c-1.6 0-2.8 1.3-2.8 2.8v17.5c0 1.6 1.3 2.8 2.8 2.8z" fill="#FFFFFF" /><path d="M912.9 732.5c-47 0-86.3 33.5-95.3 77.8H701.9c-11.7 0-20.2-2.3-23.2-6.3-2-2.7-2-7-2-9v-51.1h109.9c37.5 0 67.9-30.5 67.9-67.9V235.2c0-37.5-30.5-67.9-67.9-67.9h-706c-37.5 0-67.9 30.5-67.9 67.9v440.7c0 37.5 30.5 67.9 67.9 67.9h557.2V795c0 4.8 0 19.3 9.9 32.4 10.9 14.4 29.1 21.7 54.2 21.7h308.2v-19.4c0-53.6-43.6-97.2-97.2-97.2zM80.6 705.1c-16.1 0-29.1-13.1-29.1-29.1V235.2c0-16.1 13.1-29.1 29.1-29.1h705.9c16.1 0 29.1 13.1 29.1 29.1v440.7c0 16.1-13.1 29.1-29.1 29.1H80.6z m832.3 105.2h-55.1c8-22.7 29.7-39 55.1-39s47.1 16.3 55.1 39h-55.1z" fill="#005BFF" /><path d="M670.8 329.4H461.2c-5.4 0-9.7 4.3-9.7 9.7s4.3 9.7 9.7 9.7h209.7c5.4 0 9.7-4.3 9.7-9.7s-4.4-9.7-9.8-9.7z" fill="#005BFF" /><path d="M670.8 402.7H461.2c-5.4 0-9.7 4.3-9.7 9.7s4.3 9.7 9.7 9.7h209.7c5.4 0 9.7-4.3 9.7-9.7s-4.4-9.7-9.8-9.7zM670.8 476.1H525.2c-5.4 0-9.7 4.3-9.7 9.7s4.3 9.7 9.7 9.7h145.6c5.4 0 9.7-4.3 9.7-9.7s-4.3-9.7-9.7-9.7z" fill="#06F3FF" /><path d="M670.8 549.4H530.1c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7h140.7c5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7z" fill="#005BFF" /></svg>
+
+        <h1>Dashboard</h1>
         </Link>
 
         <Link href={'/products'} className={pathname.includes('/products') ? activeLink : inactiveLink}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
         </svg>
-         <h1 className='hover:text-neon-green'>Products</h1>
+         <h1>Products</h1>
         </Link>
 
         <Link href={'/categories'} className={pathname.includes('/categories') ? activeLink : inactiveLink}>
        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 ">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
         </svg>
-         Categories
+         <h1>Categories</h1>
         </Link>
 
         <Link href={'/orders'} className={pathname.includes('/orders') ? activeLink : inactiveLink}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-10">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
         </svg>
-       Orders
+       <h1>Orders</h1>
 
         </Link>
         <Link href={'/settings'} className={pathname.includes('/settings') ? activeLink : inactiveLink}>
@@ -54,15 +55,16 @@ const {pathname} = router;
         <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
-       Settings
+       <h1>Settings</h1>
         </Link>
         <Link href={'/signOut'} className={pathname.includes('/signOut') ? activeLink : inactiveLink}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
-      Log Out
+      <h1>Log Out</h1>
         </Link>
         </nav>
         </aside>
     );
+    
     }

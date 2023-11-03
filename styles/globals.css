@@ -22,26 +22,25 @@ label{
 }
 
 .btn-primary{
-    @apply  px-4 py-1 rounded-lg shadow-sm text-dodger-blue-100 font-bold bg-dodger-blue-600 opacity-60
-     hover:bg-gradient-to-l from-dodger-blue-400 to-dodger-blue-800 hover:text-neon-green hover:opacity-90;
+    @apply  px-4 py-1 rounded-lg shadow-sm text-opacity-30 bg-dodger-blue-600 opacity-70
+     hover:bg-gradient-to-l from-silver-800 to-silver-400 hover:opacity-90 hover:text-neon-red;
 }
 
 table.basic{
-    @apply w-full opacity-80;
-    z-index: -1;
+    @apply w-full opacity-90 ;
 }
 
 table.basic thead tr th
 {
     @apply text-sm  uppercase border-b px-4 py-2;
-    z-index:"1";
+ 
 }
 table.basic tr td{
-    @apply border  px-4 py-1 bg-silver-800 text-silver-100 text-2xl; 
+    @apply border  px-4 py-1 bg-black-800 text-silver-100 text-2xl hover:text-neon-blue  ; 
 }
 table.basic a{
     @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1  bg-silver-300 text-silver-300 hover:bg-gradient-to-l from-silver-900 to-black-900 hover:text-silver-100 hover:opacity-90;
 }
 .btn-default,.btn-red{
-    @apply px-4 py-1 rounded-md shadow-sm bg-black-950;
+    @apply px-4 py-1 rounded-md shadow-sm bg-dodger-blue-900;
 }

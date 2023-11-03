@@ -122,7 +122,8 @@ onChange={ev=> setDescription(ev.target.value)}
 value={price}
 onChange={ev=> setPrice(ev.target.value)}/>
 
-<button type="submit" className="btn-primary">save</button>
+<button type="submit" className="btn-primary">
+  save</button>
 </form>
 );
 }
