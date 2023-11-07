@@ -10,6 +10,7 @@ import  {withSwal}   from 'react-sweetalert2'
     const [parentCategory,setParentCategory] = useState('');
     const [categories,setCategories] = useState([]);
     const [properties,setProperties] = useState([]);
+    
     useEffect(() => {
       fetchCategories();
     }, [])
@@ -21,7 +22,14 @@ import  {withSwal}   from 'react-sweetalert2'
 
  async function saveCategory(ev){
     ev.preventDefault();
-    const data = {name,parentCategory};
+    const data = {
+        name,
+        parentCategory,
+        properties:properties.map(p => ({
+            name:p.name,
+            values:p.values.split(','),
+        })),
+    };
 
     if (editedCategory) {
         data._id = editedCategory._id;
@@ -32,6 +40,7 @@ import  {withSwal}   from 'react-sweetalert2'
     }
     setName('');
     setParentCategory('');
+    setProperties([]);
     fetchCategories();
 }
 
@@ -39,6 +48,12 @@ function editCategory(category){
     setEditedCategory(category);
     setName(category.name);
     setParentCategory(category.parent?._id);
+    setProperties(
+        category.properties.map(({name,values}) => ({ 
+            name,
+            values:values.join(',')
+        }))
+    );
 }
 
 function deleteCategory(category) {
@@ -62,6 +77,20 @@ function deleteCategory(category) {
     function addProperty() {
         setProperties(prev => {
             return [...prev, {name:'',values:''}];
+        });
+    }
+    function handlePropertyNameChange(index,property,newName) {
+        setProperties(prev => {
+            const properties = [...prev];
+            properties[index].name=newName;
+            return properties;
+        });
+    }
+    function handlePropertyValuesChange(index,property,newValues) {
+        setProperties(prev => {
+            const properties = [...prev];
+            properties[index].values=newValues;
+            return properties;
         });
     }
 
@@ -94,16 +123,25 @@ function deleteCategory(category) {
                     <label className="block">Properties</label>
                     <button onClick={addProperty}
                     className="btn-default text-sm"
-                     type="button">Add new Property
+                     type="button">
+                        Add new Property
                      </button>
-                     {properties.length > 0 && properties.map(property => (
-                        <div className="flex gap-1">
-                            <input type="text" value={property.name} placeholder="property name (example:color)"/>
-                            <input type="text" value={property.values} placeholder="values, comma separated"/>
+                     {properties.length > 0 && properties.map
+                     ((property,index) => (
+                    <div className="flex gap-1 mb-2">
+                        <input type="text"
+                             value={property.name} 
+                           onChange={ev => 
+                            handlePropertyNameChange(index,property,
+                               ev.target.value)}
+                             placeholder="property name (example:color)"/>
+                        <input type="text"
+                        onChange={ev =>
+                             handlePropertyValuesChange(index,property,ev.target.value)}
+                                 value={property.values} 
+                                 placeholder="values, comma separated"/>
                         </div>
-                     )
-
-                     )}
+                     ))}
                 </div>
                 <button type="submit" className="btn-primary flex gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" color="" fontWeight="bold">
@@ -118,10 +156,10 @@ function deleteCategory(category) {
                     <thead>
                         <tr>
                             <td>
-                             <h1 className="text-neon-green">Category Name</h1>
+                             <h1 className="text-black-800">Category Name</h1>
                              </td>
                             <td>
-                            <h1 className="text-neon-green">Parent category</h1>
+                            <h1 className="text-black-800">Parent category</h1>
                              </td>
                         </tr>
                     </thead>

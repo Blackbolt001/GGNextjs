@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Nav from '../components/Nav';
+import { Container } from "postcss";
 
 
 
@@ -8,6 +9,7 @@ export default function Layout({children}) {
   const { data: session } = useSession()
  if (!session) {
   return (
+    <div className="bg-black-800 flex items-center">
     <div className="  mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')]   justify-center  bg-no-repeat  bg-center min-h-screen flex flex-wrap">
       
       <h1></h1>
@@ -15,12 +17,8 @@ export default function Layout({children}) {
         <h1 className="text-neon-blue font-bold text-6xl   hover:blur-none duration-1000 "> <span className="text-neon-pink saturate-150 font-bold">Georgia</span> Goose
         <span className="text-black-400 hover:text-neon-yellow hover:blur-none blur-sm duration-700 "> Designs </span> 
         </h1>
-        <div className="bg-silver-200 saturate-50 py-20">
-        <h2 className="text-neon-blue mx-4 text-center font-bold text-3x1 blur-sm hover:text-black-950 hover:blur-none duration-1000 "> <ul>Backend Dashboard platforms</ul>
-        <ul>
-          <li className=" text-neon-yellow saturate-200 hover:text-neon-blue ">putting businesses back in charge.
-          </li>
-          </ul> 
+        <div className="bg-silver-600 saturate-50 py-20">
+        <h2 className="text-neon-blue mx-4 text-center font-bold text-3x1  hover:text-black-950 "> <ul>Backend Dashboard platforms</ul>
         </h2>
         </div>
 </div>
@@ -30,19 +28,26 @@ export default function Layout({children}) {
     </button>
    </div>
    </div>
+   </div>
+      
   );
 
  }
   return (
-    <div className=" p-12 flex flex-wrap">
-      <h1 className="text-neon-blue font-bold text-6xl   hover:blur-none duration-1000 "> <span className="text-neon-pink saturate-150 font-bold">Georgia</span> Goose
-      <span className="text-black-400 hover:text-neon-yellow hover:blur-none blur-sm duration-700 "> Designs </span> 
-      </h1>
+    <div className=" min-h-screen bg-dodger-blue-900 flex">
     <Nav/>
-    <div className="flex-grow bg-black mt-2 mr-2 mb-2 rounded-lg p-4">
+    <div className=" p-4 bg-silver-200 rounded-lg">
+      <h1 className="text-black-700 font-bold text-5xl hover:blur-none duration-1000 ">Georgia
+      <span className=" text-neon-pink"> Goose</span>
+      <span className="text-black-700 hover:text-neon-yellow hover:blur-none blur-sm duration-700  ">  Designs</span> 
+         </h1>
+    <div className="flex-grow bg-black-400 mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
   </div>
   </div>
+  </div>
+
+
 
   );
 }
