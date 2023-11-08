@@ -4,6 +4,7 @@ import { useState } from "react";
 
 
 
+
 export default function Layout({children}) {
   const [showNav,setShowNav] = useState(false);
   const { data: session } = useSession();
@@ -35,29 +36,24 @@ export default function Layout({children}) {
  }
   return (
     <div className=" bg-dodger-blue-secondary">
-      <h1 className="text-white font-bold p-4 text-5xl hover:blur-none duration-1000 text-center">Georgia
-      <span className=" text-neon-pink hover:text-3xl hover:text-neon-blue hover:transition-4 transition-all "> Goose</span>
+      <h1 className="text-white font-bold p-4 text-3xl hover:blur-none duration-1000 text-center">Georgia
+      <span className=" text-neon-pink hover:text-2xl hover:text-neon-blue hover:transition-4 transition-all "> Goose</span>
       <span className="text-white hover:text-neon-yellow hover:blur-none blur-sm duration-700 pb-4 ">  Designs</span> 
          </h1> 
-         <div className="bg-dodger-blue-back min-h-screen">
-          <button onClick={() => setShowNav(true)}>
+         <button onClick={() => setShowNav(true)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
  </button>
+         <div className="bg-gradient-to-r from-dodger-blue-primary to-dodger-blue-secondary min-h-screen">
+          <div className=" md:hidden flex items-center p-4"></div>
          <div className="flex">
-         <Nav show={showNav}/>
+         <Nav show={ showNav }/>
     <div className=" flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
   </div>
   </div>
   </div>
   </div>
-
-
- 
-
-
-
   );
 }

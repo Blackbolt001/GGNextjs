@@ -129,7 +129,7 @@ function removeProperty(indexToRemove) {
     <div className="mb-2">
         <label className="block">Properties</label>
     <button onClick={addProperty}
-        className="btn-default text-sm mb-2"
+        className="btn-primary text-sm mb-2"
         type="button">
             Add new Property
     </button>
@@ -152,7 +152,7 @@ function removeProperty(indexToRemove) {
     <button
     onClick={() => removeProperty(index)}
     type="button"
-    className="btn-default">
+    className="btn-primary">
     Remove
     </button>
 
@@ -168,7 +168,7 @@ function removeProperty(indexToRemove) {
         setParentCategory('');
         setProperties([]);
     }}
-     className="btn-default">Cancel
+     className="btn-primary">Cancel
      </button>
 
      )}

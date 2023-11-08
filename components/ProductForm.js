@@ -92,7 +92,7 @@ return(
 <form onSubmit={saveProduct}>
 <label>Product Name</label>
 <input type="text" 
-placeholder="product name" className="bg-stone-600"
+placeholder="product name" className="bg-dodger-blue-back"
 value={title}
 onChange={ev => setTitle(ev.target.value)}/>
 
@@ -149,13 +149,13 @@ setList={updateImagesOrder}>
 </div>
 
 <label>description</label>
-<textarea placeholder="description" className="bg-stone-700"
+<textarea placeholder="description" className="bg-dodger-blue-back"
 value={description}
 onChange={ev=> setDescription(ev.target.value)}
 />
 
 <label>Price (USD)</label>
-<input type="number" placeholder="price" className="bg-stone-900"
+<input type="number" placeholder="price" className="bg-dodger-blue-back"
 value={price}
 onChange={ev=> setPrice(ev.target.value)}/>
 
