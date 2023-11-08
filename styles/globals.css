@@ -23,7 +23,7 @@ label{
 
 .btn-primary{
     @apply  px-4 py-1 rounded-lg shadow-sm text-opacity-30 bg-dodger-blue-600 opacity-70
-     hover:bg-gradient-to-l from-silver-800 to-silver-400 hover:opacity-90 hover:text-neon-red;
+     hover:bg-gradient-to-l from-silver-800 to-silver-400 hover:opacity-90 hover:text-neon-green saturate-200;
 }
 
 table.basic{
@@ -36,10 +36,10 @@ table.basic thead tr th
  
 }
 table.basic tr td{
-    @apply border  px-4 py-1 bg-opacity-90 bg-black-100 text-black-950 text-2xl saturate-200 hover:text-neon-blue  ; 
+    @apply border  px-4 py-1 bg-opacity-90 bg-black-100 text-2xl saturate-200 hover:text-neon-blue  ; 
 }
 table.basic a{
-    @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1  bg-silver-300 text-silver-300 hover:bg-gradient-to-l from-silver-900 to-black-900 hover:text-silver-100 hover:opacity-90;
+    @apply  text-sm p-1 px-2 rounded-md inline-flex gap-1 mr-1  bg-silver-300 hover:bg-gradient-to-l from-silver-900 to-black-900 hover:opacity-90;
 }
 .btn-default,.btn-red{
     @apply px-4 py-1 rounded-md shadow-sm bg-dodger-blue-900;
