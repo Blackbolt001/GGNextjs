@@ -28,12 +28,12 @@ export default function Layout({children}) {
         </div>
         </Draggable>
 </div>
-   <Draggable>
+
    <div className=" flex items-center justify-center bottom-40">
    <button type="submit" onClick={() => signIn('google')} className=" align-center justify-center text-stone-100 transition-1 transition-all transition-100 font-bold border-2 rounded-md border-l-neon-200 px-10 py-3 b opacity-80 hover:bg-stone-300 hover:shadow-lg bg-gradient-to-r from-stone-700 to-stone-800 tracking-widest ring-2 ring-stone-200 hover:brightness-125 hover:contrast-100 hover:saturate-200 hover:shadow-stone-100">Connect
     </button>
    </div>
-   </Draggable>
+
    </div>
    </div>
       
