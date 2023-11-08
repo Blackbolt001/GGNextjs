@@ -24,7 +24,8 @@ module.exports = {
           '950': '#11365a',
           'primary':'#5542F6',
           'secondary':'#5218FA',
-          'tertiary':'#5A4FCF'
+          'tertiary':'#5A4FCF',
+          'back':'#f0ebff'
 
       },
       'black': {

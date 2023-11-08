@@ -1,17 +1,16 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Nav from '../components/Nav';
-import { Container } from "postcss";
-import Draggable from "react-draggable";
-
+import { useState } from "react";
 
 
 
 export default function Layout({children}) {
-  const { data: session } = useSession()
+  const [showNav,setShowNav] = useState(false);
+  const { data: session } = useSession();
  if (!session) {
   return (
     <div className="bg-black-950 flex items-center">
-    <div className="  mx-auto bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')]   justify-center  bg-no-repeat  bg-center min-h-screen flex flex-wrap">
+    <div className="bg-[url('https://img1.wallspic.com/previews/0/3/5/8/3/138530/138530-urbanarea-water-light-city-blue-x350.jpg')]   justify-center  bg-no-repeat  bg-center min-h-screen flex flex-wrap">
       
       <h1></h1>
       <div className="   p-12 flex flex-auto">
@@ -35,15 +34,22 @@ export default function Layout({children}) {
 
  }
   return (
-    <div className=" min-h-screen min-w-full bg-dodger-blue-secondary rounded-lg items-center">
-    <div className=" min-h-screen p-4 bg-dodger-blue-tertiary rounded-lg  flex">
-      <h1 className="text-white font-bold p-4 text-5xl hover:blur-none duration-1000 text-center flex flex-col">Georgia
-      <span className=" text-neon-pink"> Goose</span>
+    <div className=" bg-dodger-blue-secondary">
+      <h1 className="text-white font-bold p-4 text-5xl hover:blur-none duration-1000 text-center">Georgia
+      <span className=" text-neon-pink hover:text-3xl hover:text-neon-blue hover:transition-4 transition-all "> Goose</span>
       <span className="text-white hover:text-neon-yellow hover:blur-none blur-sm duration-700 pb-4 ">  Designs</span> 
-      <Nav/>
          </h1> 
-    <div className="flex-grow rounded-lg p-4">
+         <div className="bg-dodger-blue-back min-h-screen">
+          <button onClick={() => setShowNav(true)}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+ </button>
+         <div className="flex">
+         <Nav show={showNav}/>
+    <div className=" flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
     <div>{children}</div>
+  </div>
   </div>
   </div>
   </div>
