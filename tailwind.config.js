@@ -23,6 +23,8 @@ module.exports = {
           '900': '#135895',
           '950': '#11365a',
           'primary':'#5542F6',
+          'secondary':'#5218FA',
+          'tertiary':'#5A4FCF'
 
       },
       'black': {
