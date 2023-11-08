@@ -41,7 +41,7 @@ export default function Layout({children}) {
 
  }
   return (
-    <div className=" min-h-screen bg-grey-grey flex">
+    <div className=" min-h-screen bg-grey-grey flex flex-col">
     <Nav/>
     <div className=" p-4 bg-silver-200 rounded-lg">
       <h1 className="text-black-700 font-bold text-5xl hover:blur-none duration-1000 ">Georgia
