@@ -35,9 +35,9 @@ export default function Layout({children}) {
 
  }
   return (
-    <div className=" min-h-screen bg-grey-grey flex flex-col">
+    <div className=" min-h-screen bg-grey-grey">
   
-    <div className=" p-4 bg-silver-200 rounded-lg">
+    <div className=" p-4 bg-silver-200 rounded-lg flex flex-col">
       <h1 className="text-black-700 font-bold text-5xl hover:blur-none duration-1000 ">Georgia
       <span className=" text-neon-pink"> Goose</span>
       <span className="text-black-700 hover:text-neon-yellow hover:blur-none blur-sm duration-700  ">  Designs</span> 
