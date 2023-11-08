@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 export default function Nav() {
 const inactiveLink = 'flex gap-2 opacity-90 text-bold items-center';
 const activeLink = inactiveLink+ ' bg-neon-highlight text-black-950 rounded-md';
-const inactiveIcon = 'flex';
-const activeIcon = inactiveIcon+ 'text-dodger-blue-primary' ;
+const inactiveIcon = ' flex h-16 w-16';
+const activeIcon = inactiveIcon+ 'text-dodger-blue-primary ' ;
 const router =useRouter();
 const {pathname} = router;
 
@@ -14,12 +14,11 @@ const {pathname} = router;
     return(
         
         <aside className=" rounded-l-lg text-stone-600 font-bold text-2xl p-4 bg-silver-200 opacity-90 ">
-                  <nav className=' gap-2 mb-2 '>
+                  <nav className=' gap-2 mb-2 flex flex-col '>
             <Link href={'/'} className=" gap-1 ">
-            
             </Link>
         <span>
-        GeorgiaGoose.
+        Welcome to your Page
         </span>
        
 

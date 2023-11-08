@@ -35,19 +35,22 @@ export default function Layout({children}) {
 
  }
   return (
-    <div className=" min-h-screen bg-grey-grey">
-  
+    <div className=" min-h-screen bg-grey-grey flex items-center">
+
     <div className=" p-4 bg-silver-200 rounded-lg flex flex-col">
-      <h1 className="text-black-700 font-bold text-5xl hover:blur-none duration-1000 ">Georgia
+      <h1 className="text-black-700 font-bold text-5xl hover:blur-none duration-1000 text-center">Georgia
       <span className=" text-neon-pink"> Goose</span>
       <span className="text-black-700 hover:text-neon-yellow hover:blur-none blur-sm duration-700  ">  Designs</span> 
          </h1> 
          <Nav/>
-    <div className="flex-grow bg-silver-200 mt-2 mr-2 mb-2 rounded-lg p-4">
+         </div>
+
+    <div className="flex-grow rounded-lg p-4">
     <div>{children}</div>
   </div>
   </div>
-  </div>
+
+ 
 
 
 
