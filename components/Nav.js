@@ -14,7 +14,7 @@ const {pathname} = router;
     return(
         
         <aside className=" rounded-l-lg text-white font-bold p-4 bg-dodger-blue-primary opacity-90 ">
-                  <nav className=' gap-2 mb-2 flex flex-col '>
+                  <nav className=' gap-2 mb-2 '>
             <Link href={'/'} className=" gap-1 ">
             </Link>
         <span>
