@@ -1,6 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import Nav from '../components/Nav';
 import { useState } from "react";
+import Logo from "@/components/Logo";
 
 
 
@@ -40,13 +41,18 @@ export default function Layout({children}) {
       <span className=" text-neon-pink hover:text-2xl hover:text-neon-blue hover:transition-4 transition-all "> Goose</span>
       <span className="text-white hover:text-neon-yellow hover:blur-none blur-sm duration-700 pb-4 ">  Designs</span> 
          </h1> 
-         <button onClick={() => setShowNav(true)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+         <div className="block md:hidden items-center justify-center">
+        
+ </div>
+
+         <div className="bg-[url('https://as1.ftcdn.net/v2/jpg/03/64/96/02/1000_F_364960224_0m7wI5OLXX5Fgg13qLECDmcTSKm2R2rI.jpg')] min-h-screen bg-no-repeat bg-cover bg-center ">
+          <div className=" md:hidden flex items-center justify-center p-4">
+          <button onClick={() => setShowNav(true)}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" color="#F500EB" className="w-16 h-16">
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
  </button>
-         <div className="bg-gradient-to-r from-dodger-blue-primary to-dodger-blue-secondary min-h-screen">
-          <div className=" md:hidden flex items-center p-4"></div>
+          </div>
          <div className="flex">
          <Nav show={ showNav }/>
     <div className=" flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">

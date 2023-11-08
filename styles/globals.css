@@ -7,7 +7,7 @@ img{
 }
 
 input, textarea, select{
-    @apply border-2  border-dodger-blue-secondary text-dodger-blue-primary rounded-md w-full py-2 px-3 bg-dodger-blue-back saturate-50 ;
+    @apply border-2  border-dodger-blue-secondary text-dodger-blue-primary rounded-md w-full py-2 px-3 bg-dodger-blue-300 saturate-50 ;
     @apply mb-2;
 }
 input:focus, textarea:focus,select:focus {
@@ -24,24 +24,24 @@ label{
 }
 
 .btn-primary{
-    @apply  px-4 py-1 rounded-lg shadow-sm text-white bg-gradient-to-l from-dodger-blue-600 to-dodger-blue-400 saturate-100
+    @apply  px-4 py-1 rounded-md shadow-sm text-white bg-gradient-to-l from-dodger-blue-600 to-dodger-blue-400 saturate-100
      hover:bg-gradient-to-r  hover:text-neon-pink ;
 }
 
 table.basic{
-    @apply w-full bg-dodger-blue-back rounded-sm shadow-md ;
+    @apply w-full bg-dodger-blue-300 rounded-sm shadow-md  ;
 }
 table.basic thead tr td,
 table.basic thead tr th
 {
-    @apply text-sm  text-gray-600 uppercase border-b border-gray-200 px-4 py-2;
+    @apply text-black-950  uppercase border-b border-dodger-blue-back;
  
 }
 table.basic tr td{
-    @apply px-4 py-1 hover:text-dodger-blue-primary  ; 
+    @apply px-4 py-1 hover:text-dodger-blue-primary border border-dodger-blue-back ; 
 }
 table.basic a{
-    @apply  text-sm py-1 px-4 rounded-sm inline-flex mx-1 items-center gap-1 hover:bg-dodger-blue-back ;
+    @apply  text-sm py-1 px-4 rounded-md inline-flex mx-1 items-center gap-1;
 }
 .btn-default,.btn-red{
     @apply px-4 py-1 rounded-md shadow-sm;
