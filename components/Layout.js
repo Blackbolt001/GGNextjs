@@ -1,7 +1,6 @@
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signIn } from "next-auth/react"
 import Nav from '../components/Nav';
 import { useState } from "react";
-import Logo from "@/components/Logo";
 
 
 
@@ -52,10 +51,11 @@ export default function Layout({children}) {
   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
  </button>
+ 
           </div>
          <div className="flex">
          <Nav show={ showNav }/>
-    <div className=" flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
+    <div className=" flex-grow text-2xl rounded-lg p-4 ">
     <div>{children}</div>
   </div>
   </div>

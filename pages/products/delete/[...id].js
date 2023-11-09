@@ -27,10 +27,10 @@ async function deleteProduct() {
 
     return (
         <Layout>
-            <h1 className="text-center"> Do you really want to delete &nbsp;&quot; {productInfo?.title}&quot;?</h1>
+            <h1 className="text-center text-3xl bg-dodger-blue-back border-1 border-gray-gray text-neon-pink rounded-md opacity-90"> Do you really want to delete &nbsp;&quot; {productInfo?.title}&quot;?</h1>
             <div className="flex gap-2 justify-center">
-            <button onClick={deleteProduct} className="btn-red">Yes</button>
-            <button onClick={goBack} className="btn-default">No</button>
+            <button onClick={deleteProduct} className="btn-primary">Yes</button>
+            <button onClick={goBack} className="btn-primary">No</button>
             </div>
         </Layout>
     )

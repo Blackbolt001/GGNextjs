@@ -103,7 +103,6 @@ function removeProperty(indexToRemove) {
 }
     return (
     <Layout> 
-        <h1> Categories</h1>
         <label>
             {editedCategory 
             ? `Edit category ${editedCategory.name}`
